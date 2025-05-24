@@ -1,0 +1,80 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  width: 100vw;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.centered-images-viewport {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+}
+.centered-images-inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: none;
+  overflow: hidden;
+}
+.scrollbar-fake {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  z-index: 2000;
+  background: transparent;
+  pointer-events: auto;
+}
+.scrollbar-inner {
+  height: 1px;
+  min-width: 4000px;
+  pointer-events: none;
+}
+.scroll-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+}
+.scrollbar-fake::-webkit-scrollbar {
+  height: 8px;
+  background: #e0e0e0;
+}
+.scrollbar-fake::-webkit-scrollbar-thumb {
+  background: #b0b0b0;
+  border-radius: 8px;
+}
+.scrollbar-fake {
+  scrollbar-width: thin;
+  scrollbar-color: #b0b0b0 #e0e0e0;
+}
